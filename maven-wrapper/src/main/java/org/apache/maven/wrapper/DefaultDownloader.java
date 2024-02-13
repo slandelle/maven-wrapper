@@ -78,7 +78,7 @@ public class DefaultDownloader implements Downloader {
         }
         Files.createDirectories(destination.getParent());
 
-        if (!"https".equals(address.getScheme())) {
+        if ("http".equals(address.getScheme())) {
             Logger.warn("Using an insecure connection to download the Maven distribution."
                     + " Please consider using HTTPS.");
         }
